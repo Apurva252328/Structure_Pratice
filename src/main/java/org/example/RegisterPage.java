@@ -34,6 +34,7 @@ public class RegisterPage extends Utils{
     private By _registerSubmitButton= By.id("register-button");
     // creating local variable of register button and storing locator on it
     private By _registerButton = By.className("ico-register");
+      private By _Continue = By.xpath("//a[@class=\"button-1 register-continue-button\"]");
 
 
     // creating method for verify user is on registration page
@@ -72,6 +73,7 @@ public class RegisterPage extends Utils{
         waitForElementToBeClickable(_registerSubmitButton,20);
         // click on register button
         clickOnElement(_registerSubmitButton);
+        clickOnElement(_Continue);
 
 
 

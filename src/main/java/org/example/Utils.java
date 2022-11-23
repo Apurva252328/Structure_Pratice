@@ -1,7 +1,10 @@
 package org.example;
 // importing a package of selenium of by
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 // importing a package of selenium of webElement
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 // importing a package of selenium of expectedConditions
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,6 +13,9 @@ import org.openqa.selenium.support.ui.Select;
 // importing a package of selenium of webDriverWait
 import org.openqa.selenium.support.ui.WebDriverWait;
 //importing package for date to text format
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 // importing java package of duration
 import java.time.Duration;
@@ -69,4 +75,22 @@ public class Utils extends BasePage {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(duration));
         wait.until(ExpectedConditions.urlToBe(url));
     }
+    public static void screenShotName(Method method){
+        method.getName();
+    }
+    public static void captureScreenshot(String screenShotName){
+//Convert web driver object to TakeScreenshot
+        TakesScreenshot scrShot =((TakesScreenshot)driver);
+        //Call getScreenshotAs method to create image file
+        File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+        //Move image file to new destination
+        File DestFile=new File("src/ScreenShots/"+screenShotName+getTimeStamp()+".jpg");
+        //Copy file at destination
+        try {
+            FileUtils.copyFile(SrcFile, DestFile);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
