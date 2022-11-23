@@ -12,6 +12,8 @@ public class Homepage extends Utils{
 
     private By _voteButton = By.id("vote-poll-1");
        // creating method for register button is present
+
+    String msg = "only register uset can vote.";
     public void verifyRegisterButtonPresent(){
         //methods checks that the two objects are equals or not.
         Assert.assertEquals(getTextFromElement(By.className("ico-register")),"Register","Register button is present ");
@@ -33,6 +35,8 @@ public class Homepage extends Utils{
         clickOnElement(_voteButton);
         // accept the ok from alert message
         driver.switchTo().alert().accept();
+        Assert.assertEquals(msg,"User has to must registered to vote");
+
     }
 
 }
