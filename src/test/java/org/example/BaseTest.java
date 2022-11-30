@@ -14,6 +14,7 @@ public class BaseTest extends Utils {
     @BeforeMethod
     //create setup method for open browser
     public void setUp() {
+    //    driverManager.openBrowser();
         driverManager.openBrowser();
     }
 
