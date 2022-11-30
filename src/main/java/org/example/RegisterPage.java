@@ -50,25 +50,25 @@ public class RegisterPage extends Utils{
         //By gender field and Click on female radio button
         clickOnElement(_genderField);
         //click on FirstName text field and send the value of text
-        typeText(_firstNameField,"Priyanka");
+        typeText(_firstNameField,LoadProp.getProperty("FirstName"));
         //click on LastName text field and send the value of text
-        typeText(_lastNameField,"Patel");
+        typeText(_lastNameField,LoadProp.getProperty("LastName"));
         //click on  Dropdown list of date and select the value of text
-        selectFromDropdownListByVisibleText(_DateOfBirthDateField,"2");
+        selectFromDropdownListByVisibleText(_DateOfBirthDateField,LoadProp.getProperty("Date"));
         //click on  Dropdown list of month and select the value of text
-        selectFromDropdownListByVisibleText(_DateOfMonthField,"April");
+        selectFromDropdownListByVisibleText(_DateOfMonthField,LoadProp.getProperty("Month"));
         //click on  Dropdown list of year and select the value of text
-        selectFromDropdownListByVisibleText(_DateOfBirthYear,"1990");
+        selectFromDropdownListByVisibleText(_DateOfBirthYear,LoadProp.getProperty("Year"));
         //click on Email text field and send the value of text
-        typeText(_emailField,"abcd"+getTimeStamp()+"@gmail.com");
+        typeText(_emailField,LoadProp.getProperty("EmailPart1")+getTimeStamp()+LoadProp.getProperty("EmailPart2"));
         // click on Company text field and send the value of text
-        typeText(_companyField,"TestCompany");
+        typeText(_companyField,LoadProp.getProperty("CompanyName"));
         //Selecting checkbox of newsletter
         clickOnElement(_NewsLetterField);
         //click on password field and type the value of text
-        typeText(_PasswordField,"abcd1234");
+        typeText(_PasswordField,LoadProp.getProperty("Password"));
         //click on Email ConfirmPassword field and type the value of sendKeys
-        typeText(_ConfirmPasswordField,"abcd1234");
+        typeText(_ConfirmPasswordField,LoadProp.getProperty("Confirm_Password"));
         // wait on register button for 20 sec
         waitForElementToBeClickable(_registerSubmitButton,20);
         // click on register button

@@ -12,9 +12,9 @@ public class TestSuit extends BaseTest {
     //creating object for registerResultPage
     RegisterResultPage registerResultPage = new RegisterResultPage();
     //creating object for electronics page
-  // ElectronicsPage electronicsPage = new ElectronicsPage();
+ ElectronicsPage electronicsPage = new ElectronicsPage();
     //creating object for camera and photo page
-  // CameraAndPhotoPage cameraAndPhotoPage = new CameraAndPhotoPage();
+  CameraAndPhotoPage cameraAndPhotoPage = new CameraAndPhotoPage();
     // creating object for details button page
     NewsDetailsButton detailsButton = new NewsDetailsButton();
     // creating object for comment result page
@@ -24,6 +24,7 @@ public class TestSuit extends BaseTest {
     // creating object for email a friend page
     EmailAFriend emailAFriend = new EmailAFriend();
     EmailAFriendResult emailAFriendResult = new EmailAFriendResult();
+    Nike nike = new Nike();
 
     //creating test method through testng
     @Test
@@ -66,13 +67,13 @@ public class TestSuit extends BaseTest {
     }
 
 
-//    @Test
-//    public void verifyEachProductHasName(){
-//     homepage.navigateToElectronicPage();
-//     electronicsPage.navigateToCameraPage();
-//     cameraAndPhotoPage.getProductName();
-//
-//    }
+    @Test
+    public void verifyEachProductHasName(){
+     homepage.navigateToElectronicPage();
+     electronicsPage.navigateToCameraPage();
+     cameraAndPhotoPage.getProductName();
+
+    }
 
     //creating test method through testng
     @Test
@@ -85,5 +86,16 @@ public class TestSuit extends BaseTest {
       registerPage.enterRegistrationDetails();
       //verify user register successfully
     //  registerResultPage.verifyRegisterResult();
+    }
+
+    @Test
+    public void verifyHovering(){
+        homepage.hoverOverAndNavigateToDesiredCategoryPage("Electronics","Camera & photo");
+        cameraAndPhotoPage.cameraAndPhotoResult();
+    }
+    @Test
+    public void verifySearchBarWithNikeProduct(){
+      homepage.searchBar();
+      nike.nikeProducts();
     }
 }
