@@ -73,7 +73,7 @@ public class RegisterPage extends Utils{
         waitForElementToBeClickable(_registerSubmitButton,20);
         // click on register button
         clickOnElement(_registerSubmitButton);
-        clickOnElement(_Continue);
+      //  clickOnElement(_Continue);
 
 
 

@@ -1,5 +1,6 @@
 Feature: As a user , I should able to be register so that i Can use account facility
 
+  @regression
   Scenario: I should able to register successfully with valid credentials
 
     Given I am register page
