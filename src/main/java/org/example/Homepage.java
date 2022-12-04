@@ -66,5 +66,9 @@ public class Homepage extends Utils{
         clickOnElement(_SearchButton);
     }
 
+    public void clickOnCategoryPage(String categoryName){
+        clickOnElement(By.linkText(categoryName));
+    }
+
 
 }
