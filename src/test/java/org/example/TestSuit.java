@@ -27,16 +27,16 @@ public class TestSuit extends BaseTest {
     Nike nike = new Nike();
 
     //creating test method through testng
-    @Test
-    public void verifyEmailAFriend(){
-        //verifying user is on register page
-        registerPage.verifyUserIsOnRegistrationPage();
-        //Filling all the details at register page
-        registerPage.enterRegistrationDetails();
-        //sending details to friend
-        emailAFriend.emailDetails();
-        //verifying result
-        emailAFriendResult.verifyEmailMessageIsSentSuccessfully();
+//     @Test
+//     public void verifyEmailAFriend(){
+//         //verifying user is on register page
+//         registerPage.verifyUserIsOnRegistrationPage();
+//         //Filling all the details at register page
+//         registerPage.enterRegistrationDetails();
+//         //sending details to friend
+//         emailAFriend.emailDetails();
+//         //verifying result
+//         emailAFriendResult.verifyEmailMessageIsSentSuccessfully();
 
     }
     //creating test method through testng
@@ -52,11 +52,11 @@ public class TestSuit extends BaseTest {
         homepage.selectCurrency();
     }
     //creating test method through testng
-    @Test
-    //checking alert message
-    public void verifyAlertMessage(){
-        homepage.voteAlert();
-    }
+//     @Test
+//     //checking alert message
+//     public void verifyAlertMessage(){
+//         homepage.voteAlert();
+//     }
     //creating test method through testng
     @Test
     public void verifyDetailsButton(){
